@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        .road {
+            height: 4px;
+            background-color: red;
+            width: 100%;
+            position: absolute;
+            bottom: -45px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="display-3 text-center text-primary">Car Racing</h1>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="pt-5">
+        <section class="container d-flex justify-content-center mb-5">
+            <form id="create-form" class="d-flex align-items-center gap-3 me-5">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="crate-car" placeholder="Create">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="color" id="crate-car-color" style="width: 50px;">
+                </div>
+                <button class="btn btn-secondary" type="submit">Create</button>
+            </form>
+
+            <form id="update-form" class="d-flex align-items-center gap-3">
+                <div class="form-group">
+                    <input class="form-control" type="text" id="update-car" placeholder="Update">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="color" id="update-car-color" style="width: 50px;">
+                </div>
+                <button class="btn btn-primary" type="submit">Update</button>
+            </form>
+        </section>
+
+        <section class="container">
+            <div class="buttons"></div>
+
+            <div>
+                <ul id="cars-list" class="list-group"></ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
